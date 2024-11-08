@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>Índice de Massa Corporal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Calculadora</a></li>
+                <!-- <li><a href="#biografi">Biografias</a></li> -->
+            </ul>
+        </nav>
+        
+    </header>
+
+
+
+    <h2>Calculadora IMC</h2>
+
+
+    <!-- <h1>Índice de Massa Corporal</h1> -->
+    <h2>
+        <!-- <p><u>Calculadora IMC</u></p> -->
+    </h2>
+
+
+    <form action="#">
+        <label for="altura">Altura:</label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="calcImc()"> Calcular IMC</button>
+
+        <p>Seu indice de massa Corporal é: <span id="resultado"></span> </p>
+    </form>
+
+
+    <script>
+        function calcImc() {
+            const altura = parseFloat(document.getElementById("altura").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const resultado = peso / (altura ** 2)
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+    </script>
+
+    <footer>&copy;Yngrid.C.2024</footer>
+
+
+
+
+</body>
+
+</html>
